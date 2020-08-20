@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <title>Team.pro</title>
+    <head>
+        <link rel="stylesheet" href="checkpage.css">
+        <script src="main.js"></script>
+    </head>
+    <body>
+       <div> 
+        <img src ="모바일.jpg" width="100%">
+        <div class="navbor">
+            <input type="button" style="width: 10%; height: 5%;" class="back_button" onclick="location.href='mobileloginafter.html'">
+            <input type="button"  class="logout_button" onclick="location.href='mobileloginafter.html'" value="로그아웃">
+        </div>
+
+            <div class="time">
+                <script>
+                    let dateO = Today_time();
+                    let timeO = Clock();    
+                    document.write(dateO.year + '년 ' + dateO.month + '월 ' + dateO.date + '일 ' + timeO.period);
+                </script>
+            </div>
+
+            <div class="box">
+                <div id="scroll">
+                    <table border="1px" style="width: 680px; height: 2000px; font-size: 40px;">
+                        <thead> 
+                            <tr>
+                                <th>학번</th>
+                                <th>이름</th>
+                                <th>출석 여부</th>
+                            </tr>  
+                        </thead>
+                        <tbody id="table">
+
+                        </tbody>        
+                    </table>
+                </div>   
+            </div>       
+                
+        </div>
+        <script>
+            
+            let number = ["112", "112", "123", "121", "122", "123" , "112", "212", "213","112", "112", "123", "121", "122", "123" , "112", "212", "213","112", "112", "123", "121", "122", "123" , "112", "212", "213","112"];
+            let number2 = ["한준호", "한준호", "123", "121", "122", "123" , "한준호", "212", "213","한준호", "한준호", "123", "121", "122", "123" , "한준호", "212", "213","한준호", "한준호", "123", "121", "122", "123" , "한준호", "212", "213","한준호"];
+            
+            let colunm = document.querySelector("#table");
+            const checkbox = "<input type='checkbox' checked>";
+            number.forEach((item, index) =>  {
+                colunm.innerHTML += "<tr>"; 
+                colunm.innerHTML += "<td>" + item + "</td>" + "<td>" + number2[index] + "</td>" + "<td>" + checkbox + "</td>"; 
+                
+                // colunm.innerHTML += " <td> " + number2[index] + " </td> ";
+                // colunm.innerHTML += " <td> " + " <checkbox><checkbox> " + " </td> ";
+                colunm.innerHTML += "</tr>"
+            });
+
+            
+        </script>
+    </body>
+</html>
