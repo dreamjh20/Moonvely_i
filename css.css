@@ -1,0 +1,35 @@
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+.line{
+    
+}
+
+#scroll{
+    overflow: scroll;
+    height: 900px;
+}
+.box{
+    position: absolute;
+    top: 670px;
+    left: 170px;
+    width: 700px;
+    height: 930px;
+}
+.back_button{
+    position: absolute;
+    left: 16px;
+    top: 25px;
+    width: 55px; 
+    height: 60px;"
+}
+.back{
+    position: absolute;
+    left: -4px;
+    top: -9px;
+    width: 100px;
+}
